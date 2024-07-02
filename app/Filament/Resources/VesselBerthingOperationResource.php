@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\VesselBerthingOperationResource\Pages;
-use App\Filament\Resources\VesselBerthingOperationResource\RelationManagers;
 use App\Models\VesselBerthingOperation;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class VesselBerthingOperationResource extends Resource
 {
@@ -85,4 +82,11 @@ class VesselBerthingOperationResource extends Resource
             'edit' => Pages\EditVesselBerthingOperation::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Vessel Berthing for Operation';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

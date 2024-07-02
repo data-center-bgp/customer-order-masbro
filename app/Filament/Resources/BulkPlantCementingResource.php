@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BulkPlantCementingResource\Pages;
-use App\Filament\Resources\BulkPlantCementingResource\RelationManagers;
 use App\Models\BulkPlantCementing;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BulkPlantCementingResource extends Resource
 {
@@ -81,4 +78,16 @@ class BulkPlantCementingResource extends Resource
             'edit' => Pages\EditBulkPlantCementing::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Bulk Plant Cementing Service';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Bulk Plant Cementing Service';
+    }
+
+    protected static ?string $navigationGroup = 'Facilities Rent';
 }

@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\WharfageBulkResource\Pages;
-use App\Filament\Resources\WharfageBulkResource\RelationManagers;
 use App\Models\WharfageBulk;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class WharfageBulkResource extends Resource
 {
@@ -91,4 +88,16 @@ class WharfageBulkResource extends Resource
             'edit' => Pages\EditWharfageBulk::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Wharfage (Bulk): Transfer Bulk Cargo Via Pipeline from/to Vessel';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Wharfage (Bulk): Transfer Bulk Cargo Via Pipeline from/to Vessel';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

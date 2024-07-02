@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CargodoringServiceResource\Pages;
-use App\Filament\Resources\CargodoringServiceResource\RelationManagers;
 use App\Models\CargodoringService;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CargodoringServiceResource extends Resource
 {
@@ -91,4 +88,16 @@ class CargodoringServiceResource extends Resource
             'edit' => Pages\EditCargodoringService::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Cargodoring Services: for Collecting and Packing Cargo at Storage Area to Jetty Area (Vice Versa)';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Cargodoring Service: for Collecting and Packing Cargo at Storage Area to Jetty Area (Vice Versa)';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

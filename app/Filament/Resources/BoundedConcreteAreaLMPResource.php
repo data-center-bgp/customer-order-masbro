@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BoundedConcreteAreaLMPResource\Pages;
-use App\Filament\Resources\BoundedConcreteAreaLMPResource\RelationManagers;
 use App\Models\BoundedConcreteAreaLMP;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BoundedConcreteAreaLMPResource extends Resource
 {
@@ -87,4 +84,16 @@ class BoundedConcreteAreaLMPResource extends Resource
             'edit' => Pages\EditBoundedConcreteAreaLMP::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Bounded & Concrete Area LMP Plant';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Bounded & Concrete Area LMP Plant';
+    }
+
+    protected static ?string $navigationGroup = 'Facilities Rent';
 }

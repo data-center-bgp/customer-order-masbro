@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\WarehouseHardRoofCoveredResource\Pages;
-use App\Filament\Resources\WarehouseHardRoofCoveredResource\RelationManagers;
 use App\Models\WarehouseHardRoofCovered;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class WarehouseHardRoofCoveredResource extends Resource
 {
@@ -87,4 +84,16 @@ class WarehouseHardRoofCoveredResource extends Resource
             'edit' => Pages\EditWarehouseHardRoofCovered::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Warehouse with Hard Roof Covered';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Warehouse with Hard Roof Covered';
+    }
+
+    protected static ?string $navigationGroup = 'Facilities Rent';
 }

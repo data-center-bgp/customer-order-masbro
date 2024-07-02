@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\OpenYardAreaResource\Pages;
-use App\Filament\Resources\OpenYardAreaResource\RelationManagers;
 use App\Models\OpenYardArea;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class OpenYardAreaResource extends Resource
 {
@@ -87,4 +84,11 @@ class OpenYardAreaResource extends Resource
             'edit' => Pages\EditOpenYardArea::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Open Yard Area';
+    }
+
+    protected static ?string $navigationGroup = 'Facilities Rent';
 }

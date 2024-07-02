@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SingleTonnageLiftingCargodoringInterStorageResource\Pages;
-use App\Filament\Resources\SingleTonnageLiftingCargodoringInterStorageResource\RelationManagers;
 use App\Models\SingleTonnageLiftingCargodoringInterStorage;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SingleTonnageLiftingCargodoringInterStorageResource extends Resource
 {
@@ -91,4 +88,16 @@ class SingleTonnageLiftingCargodoringInterStorageResource extends Resource
             'edit' => Pages\EditSingleTonnageLiftingCargodoringInterStorage::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Single Tonnage Lifting/Cargodoring Inter Storage/Plant';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Single Tonnage Lifting/Cargodoring Inter Storage/Plant';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

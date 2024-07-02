@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\PersonnelMealResource\Pages;
-use App\Filament\Resources\PersonnelMealResource\RelationManagers;
 use App\Models\PersonnelMeal;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class PersonnelMealResource extends Resource
 {
@@ -87,4 +84,11 @@ class PersonnelMealResource extends Resource
             'edit' => Pages\EditPersonnelMeal::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Personnel Meals';
+    }
+
+    protected static ?string $navigationGroup = 'Other Support Services';
 }

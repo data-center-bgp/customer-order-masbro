@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\IndustrialSupplyForBoatResource\Pages;
-use App\Filament\Resources\IndustrialSupplyForBoatResource\RelationManagers;
 use App\Models\IndustrialSupplyForBoat;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class IndustrialSupplyForBoatResource extends Resource
 {
@@ -91,4 +88,16 @@ class IndustrialSupplyForBoatResource extends Resource
             'edit' => Pages\EditIndustrialSupplyForBoat::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Drill/Industrial Water/Industrial Supply for Boat';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Drill/Industrial Water/Industrial Supply for Boat';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

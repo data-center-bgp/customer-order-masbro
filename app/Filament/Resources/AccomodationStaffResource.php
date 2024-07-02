@@ -90,4 +90,18 @@ class AccomodationStaffResource extends Resource
             'edit' => Pages\EditAccomodationStaff::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Accomodation for Staff & Non-Staff';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Accomodation for Staff & Non-Staff';
+    }
+
+    protected static ?string $navigationGroup = 'Other Support Services';
+
+    protected static bool $hasTitleCaseModelLabel = false;
 }

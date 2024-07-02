@@ -3,15 +3,11 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\StevedoringServiceResource\Pages;
-use App\Filament\Resources\StevedoringServiceResource\RelationManagers;
 use App\Models\StevedoringService;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class StevedoringServiceResource extends Resource
 {
@@ -68,4 +64,16 @@ class StevedoringServiceResource extends Resource
             'edit' => Pages\EditStevedoringService::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Stevedoring Service: for Loading and Unloading Cargo on Vessel';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Stevedoring Service: for Loading and Unloading Cargo on Vessel';
+    }
+
+    protected static ?string $navigationGroup = 'Jetty/Quay/Wharf';
 }

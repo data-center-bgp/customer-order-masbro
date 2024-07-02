@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ConcreteRoofedShelterResource\Pages;
-use App\Filament\Resources\ConcreteRoofedShelterResource\RelationManagers;
 use App\Models\ConcreteRoofedShelter;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ConcreteRoofedShelterResource extends Resource
 {
@@ -87,4 +84,11 @@ class ConcreteRoofedShelterResource extends Resource
             'edit' => Pages\EditConcreteRoofedShelter::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Concrete Roofed Shelters';
+    }
+
+    protected static ?string $navigationGroup = 'Facilities Rent';
 }
