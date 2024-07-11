@@ -1,66 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# DOKUMENTASI PROJECT CUSTOMER ORDER UNTUK PT MASHUD BERSAUDARA INTERNATIONAL
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ini adalah project dalam rangka menyimpan data-data yang diperlukan untuk pekerjaan terkait dalam Barokah Perkasa Group, khususnya pada business unit Shorebase di PT Mashud Bersaudara International. Saat ini project sudah siap dalam skala production dan bisa digunakan.
 
-## About Laravel
+## TECH STACK
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project ini dibuat dengan:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   PHP
+-   Laravel
+-   Filament
+-   TailwindCSS
+-   Livewire
+-   AlpineJS
+-   Filament Shield
+-   PostgreSQL
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## FITUR
 
-## Learning Laravel
+Untuk sementara, fitur aplikasi ini masih terbatas dan digunakan untuk lingkup perusahaan saja. Beberapa diantaranya adalah:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   Otentikasi dan otorisasi akses data
+-   Merekam data penyewaan fasilitas bagi perusahaan yang ingin menggunakan fasilitas perusahaan
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## KONFIGURASI
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Setup Environment
 
-## Laravel Sponsors
+Sebelum memulai project, beberapa hal yang perlu diinstall adalah sebagai berikut:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   PHP 7.4 keatas
+-   PostgreSQL
+-   Composer
+-   Laragon
 
-### Premium Partners
+### Instalasi
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Untuk memulai project dari awal, ada tiga metode
 
-## Contributing
+1. Dengan Laragon
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Jalankan aplikasi Laragon, klik Start All, dan buat aplikasi dengan menu **Quick app**. Tunggu hingga instalasi project Laravel selesai, kemudian buka projectnya.
+-   Install Filament dengan command `composer require filament/filament:"^3.2" -W`, setelah itu jalankan lagi `php artisan filament:install --panels`
+-   Buat user baru dengan command `php artisan make:filament-user` untuk keperluan development. Setelah itu, pengembangan aplikasi bisa dilakukan sesuai dengan dokumentasi yang ada.
+-   Untuk Filament Shield, instalasinya dilakukan dengan command `composer require bezhansalleh/filament-shield`, dan lakukan pengembangan sesuai dengan dokumentasi yang diberikan.
 
-## Code of Conduct
+2. Dengan Composer (cara manual)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   Install project dengan command `composer create-project laravel/laravel project-name`.
+-   Untuk menjalankan aplikasi, bisa menggunakan command `php artisan serve`.
+-   Untuk instalasi Filament dan Filament Shield, cara yang digunakan sama dengan cara instalasi diatas.
 
-## Security Vulnerabilities
+3. Clone project dari GitHub
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   Clone project ini dengan command `git clone https://github.com/data-center-bgp/data-center-bgp.git`.
+-   Install project dengan menjalankan `composer install` dan `npm install`.
+-   Untuk menjalankan aplikasi, bisa menggunakan command `php artisan serve`.
